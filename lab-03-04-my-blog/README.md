@@ -35,3 +35,8 @@
 - `.htaccess` — перенаправляет адреса без `.php` в `index.php` на Apache.
 - `router.php` — запуск через встроенный сервер PHP (не обязателен для XAMPP).
 
+Работающий сайт
+Лабораторные работы №3 и №4 — «Мой блог».
+
+Сайт: https://my-blog-mospolytech.freedev.app/
+
