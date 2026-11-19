@@ -1,0 +1,65 @@
+:root {
+    --background: #f5f6f9;
+    --surface: #ffffff;
+    --text: #1e2634;
+    --muted: #657083;
+    --border: #dfe4ec;
+    --accent: #1955c8;
+    --accent-hover: #1045aa;
+    --shadow: 0 14px 45px rgba(26, 42, 74, 0.07);
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--background); color: var(--text); line-height: 1.55; }
+a { color: var(--accent); }
+button, input, select, textarea { font: inherit; }
+.site-wrapper { display: flex; flex-direction: column; min-height: 100vh; }
+.site-header { display: grid; grid-template-columns: clamp(105px, 16vw, 255px) minmax(0, 1fr) clamp(105px, 16vw, 255px); align-items: center; gap: clamp(8px, 1.5vw, 20px); padding: 22px clamp(16px, 3vw, 60px); background: var(--surface); border-bottom: 1px solid var(--border); }
+.university-logo { display: inline-flex; align-items: center; max-width: 255px; }
+.university-logo img { display: block; width: 100%; height: auto; }
+.site-header h1 { margin: 0; font-size: clamp(16px, 2vw, 25px); font-weight: 700; text-align: center; letter-spacing: -0.04em; white-space: nowrap; line-height: 1.25; }
+.main-content { flex: 1; display: flex; justify-content: center; padding: 48px 20px 60px; }
+.content-card { width: min(100%, 680px); height: fit-content; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow); padding: clamp(24px, 4vw, 46px); }
+.section-tag { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+h2 { margin: 10px 0 6px; font-size: clamp(26px, 3vw, 35px); line-height: 1.2; letter-spacing: -0.04em; }
+.intro { margin: 0 0 28px; color: var(--muted); }
+.form-field { margin-bottom: 20px; }
+.form-field label, .output-label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+.required { color: #ca3145; }
+.form-field input, .form-field select, .form-field textarea, .headers-output { display: block; width: 100%; border: 1px solid #cbd3e0; border-radius: 10px; background: #fff; color: var(--text); padding: 12px 14px; outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.form-field input, .form-field select { min-height: 48px; }
+.form-field textarea { min-height: 125px; resize: vertical; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus, .headers-output:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(25, 85, 200, 0.12); }
+.form-field input::placeholder, .form-field textarea::placeholder { color: #96a0ae; }
+.reply-options { margin: 0 0 26px; padding: 0; border: 0; }
+.reply-options legend { padding: 0 0 10px; font-size: 14px; font-weight: 700; }
+.checkbox-group { display: flex; flex-wrap: wrap; gap: 22px; }
+.checkbox-label { display: inline-flex; gap: 9px; align-items: center; cursor: pointer; color: #344152; }
+.checkbox-label input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.primary-button, .secondary-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700; cursor: pointer; transition: background-color 0.15s; }
+.primary-button { width: 100%; color: #fff; background: var(--accent); border: 1px solid var(--accent); }
+.primary-button:hover { background: var(--accent-hover); }
+.secondary-button { color: var(--accent); background: #eef3ff; border: 1px solid #cbdaf8; }
+.secondary-button:hover { background: #e2ebff; }
+.next-page { display: flex; flex-direction: column; gap: 5px; margin-top: 27px; padding-top: 23px; border-top: 1px solid var(--border); font-size: 14px; }
+.next-page > span { color: var(--muted); }
+.text-link { width: fit-content; font-weight: 700; text-underline-offset: 3px; }
+.headers-output { min-height: 340px; background: #f9fafc; resize: vertical; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; }
+.page-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.page-actions .primary-button { width: auto; }
+.site-footer { text-align: center; padding: 23px 20px; color: var(--muted); background: var(--surface); border-top: 1px solid var(--border); font-size: 14px; }
+/* На узких экранах сохраняем весь заголовок в ОДНУ строку.
+   Логотип остаётся слева, а размер шрифта и логотипа плавно уменьшается. */
+@media (max-width: 700px) {
+    .site-header { grid-template-columns: clamp(58px, 18vw, 125px) minmax(0, 1fr); padding: 16px clamp(12px, 3vw, 20px); gap: clamp(8px, 2vw, 12px); }
+    .university-logo { width: 100%; }
+    .site-header h1 { font-size: clamp(10px, 3.2vw, 17px); }
+    .header-spacer { display: none; }
+    .main-content { padding-top: 28px; }
+}
+@media (max-width: 480px) {
+    .content-card { border-radius: 14px; }
+    .page-actions { flex-direction: column; }
+    .page-actions .primary-button, .page-actions .secondary-button { width: 100%; }
+}
