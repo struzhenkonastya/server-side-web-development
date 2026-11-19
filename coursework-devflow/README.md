@@ -92,3 +92,28 @@ php tools/build_hosting.php
 - Пояснительная записка Word создаётся отдельно. Скриншоты работоспособности нужно сделать **после фактического запуска на вашей машине**.
 
 Фреймворк: https://docs.flightphp.com/en/v3/ (MIT-лицензия).
+
+## Курсовой проект DevFlow
+
+**Тема:** Разработка веб-приложения DevFlow с использованием backend-фреймворка Flight PHP.
+
+### Работающий сайт
+https://devflow-mospolytech.freedev.app/
+
+### Исходный код
+https://github.com/struzhenkonastya/server-side-web-development/tree/main/coursework-devflow
+
+### Используемые технологии
+- PHP 8
+- Flight PHP
+- MySQL
+- HTML5, CSS3, JavaScript
+- Composer
+
+### Основные возможности
+- Регистрация и авторизация пользователей
+- Личный кабинет и управление задачами
+- База знаний со статьями
+- Калькулятор стоимости веб-проекта
+- Форма обратной связи
+- Хранение данных в MySQL
