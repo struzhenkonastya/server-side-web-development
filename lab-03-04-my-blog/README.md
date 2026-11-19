@@ -28,6 +28,12 @@
 - `/articles/1` — статья с автором `nastya_dev`.
 - `/articles/2` — статья с автором `alex_web`.
 
+Лабораторная №5
 
+Реализовано получение автора статьи из таблицы users с помощью дополнительного SQL-запроса в ArticlesController::show(). Nickname автора выводится в шаблоне статьи.
+
+Работающий сайт
+
+https://my-blog-mospolytech.freedev.app/
 
 
