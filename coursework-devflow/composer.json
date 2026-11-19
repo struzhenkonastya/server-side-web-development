@@ -1,0 +1,13 @@
+{
+  "name": "student/devflow-coursework",
+  "description": "DevFlow — курсовой проект по серверной веб-разработке",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "flightphp/core": "^3.19"
+  },
+  "config": {"sort-packages": true}
+}

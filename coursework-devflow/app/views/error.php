@@ -1,0 +1,1 @@
+<div class="error-view"><span>◈</span><h1><?=h($title??'Что-то пошло не так')?></h1><p><?=h($message??'Попробуйте вернуться на главную.')?></p><a class="button button-primary" href="<?=h(url())?>">Вернуться на главную →</a></div>
